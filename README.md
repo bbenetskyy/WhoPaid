@@ -28,3 +28,4 @@ Color Scheme:
 * Light Pink Color - `#FF4C61`
 ---
 
+[Dummy Design at Figma](https://www.figma.com/file/DPIiDB0hSlRbI4GSif8rMX/Untitled?node-id=0%3A1)
