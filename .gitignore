@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/WhoPaid
+/WhoPaid.Core/obj
+/WhoPaid.Droid/obj
+/WhoPaid.iOS/obj
+/WhoPaid.UI/obj
+/WhoPaid.Core/bin/Debug/netstandard2.0
+/WhoPaid.Droid/bin/Debug
+/WhoPaid.iOS/bin/iPhone/Debug
+/WhoPaid.UI/bin/Debug/netstandard2.0
