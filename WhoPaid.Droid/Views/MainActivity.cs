@@ -10,13 +10,14 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Forms.Platforms.Android.Views;
-using WhoPaid.Core.ViewModels.Main;
+using WhoPaid.Core.ViewModels;
+using WhoPaid.UI;
 
 namespace WhoPaid.Droid
 {
     [Activity(
         Theme = "@style/AppTheme")]
-    public class MainActivity : MvxFormsAppCompatActivity<MainViewModel>
+    public class MainActivity : MvxFormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {

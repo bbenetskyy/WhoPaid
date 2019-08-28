@@ -1,6 +1,6 @@
 ﻿using MvvmCross.IoC;
 using MvvmCross.ViewModels;
-using WhoPaid.Core.ViewModels.Home;
+using WhoPaid.Core.ViewModels;
 
 namespace WhoPaid.Core
 {

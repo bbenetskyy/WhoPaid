@@ -5,14 +5,14 @@
     xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
     xmlns:local="clr-namespace:WhoPaid.UI.Pages"
+    xmlns:viewModels="clr-namespace:WhoPaid.Core.ViewModels;assembly=WhoPaid.Core"
     x:Class="WhoPaid.UI.Pages.HomePage"
-    xmlns:viewModels="clr-namespace:WhoPaid.Core.ViewModels.Home;assembly=WhoPaid.Core"
-                      Title="Main page">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome!!&#10;App scaffolded with MvxScaffolding"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    Title="Main page">
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="Welcome!!&#10;App scaffolded with MvxScaffolding"
+          VerticalOptions="CenterAndExpand"
+          HorizontalOptions="CenterAndExpand" />
+    </StackLayout>
+  </ContentPage.Content>
 </views:MvxContentPage>

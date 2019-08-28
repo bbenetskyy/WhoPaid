@@ -7,30 +7,20 @@
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="6.3.1" />
     <PackageReference Include="MvvmCross.CodeAnalysis" Version="6.3.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Resources\AppResources.uk.Designer.cs">
-      <DependentUpon>AppResources.uk.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Update="Resources\AppResources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>AppResources.resx</DependentUpon>
-    </Compile>
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Resources\AppResources.uk.resx">
-      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator></Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\AppResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <Generator></Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WhoPaid.ReactiveUI.Interop\WhoPaid.ReactiveUI.Interop.csproj" />
   </ItemGroup>
 
 </Project>
