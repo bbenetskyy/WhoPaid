@@ -165,6 +165,10 @@
       <Project>{108C09A4-789F-4288-9DD3-199641F09C5C}</Project>
       <Name>WhoPaid.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WhoPaid.ReactiveUI.Interop\WhoPaid.ReactiveUI.Interop.csproj">
+      <Project>{47526ad2-c040-4fc7-a6b4-0a9b01e2e27c}</Project>
+      <Name>WhoPaid.ReactiveUI.Interop</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WhoPaid.UI\WhoPaid.UI.csproj">
       <Project>{56793BF7-5A40-4864-B351-C04D30046328}</Project>
       <Name>WhoPaid.UI</Name>

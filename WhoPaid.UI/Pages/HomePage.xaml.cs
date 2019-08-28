@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MvvmCross.Forms.Presenters.Attributes;
 using MvvmCross.Forms.Views;
-using WhoPaid.Core.ViewModels.Home;
+using WhoPaid.Core.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
