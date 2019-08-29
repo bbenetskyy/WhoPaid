@@ -7,11 +7,14 @@
              mc:Ignorable="d"
              x:Class="WhoPaid.UI.Controls.PayerPreviewCell">
       <StackLayout>
-          <controls:InitialsControl d:BackColor="{StaticResource Red}" d:Name="BB" HeightRequest="50" WidthRequest="50" d:BackgroundColor="Aquamarine"/>
+          <controls:InitialsControl BackColor="{StaticResource Red}" Name="BB" HeightRequest="50" WidthRequest="50" />
         <Label d:Text="Bohdan Benetskyi"/>
           <Label d:Text="129 per month"/>
-          <StackLayout>
-
+          <StackLayout Orientation="Horizontal">
+            <controls:StateControl IsPaid="False"/>
+            <controls:StateControl IsPaid="False"/>
+            <controls:StateControl IsPaid="True"/>
+            <controls:StateControl IsPaid="True"/>
           </StackLayout>
     </StackLayout>
 </ViewCell>

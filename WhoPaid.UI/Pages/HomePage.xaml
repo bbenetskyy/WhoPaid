@@ -5,6 +5,7 @@
     xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:WhoPaid.Core.ViewModels;assembly=WhoPaid.Core"
     xmlns:ic="clr-namespace:WhoPaid.Core.Static;assembly=WhoPaid.Core"
+    xmlns:controls="clr-namespace:WhoPaid.UI.Controls;assembly=WhoPaid.UI"
     x:Class="WhoPaid.UI.Pages.HomePage"
     Title="Main page">
     <ContentPage.Content>
@@ -22,6 +23,17 @@
                 <Label Text="{x:Static ic:IcoMoonCodes.Plus}" Style="{StaticResource IconLabel}"/>
                 <Label Text="{x:Static ic:IcoMoonCodes.Right}" Style="{StaticResource IconLabel}"/>
             </FlexLayout>
+            <StackLayout>
+                <controls:InitialsControl BackColor="{StaticResource Red}" Name="Bohdan Benetskyi" HeightRequest="50" WidthRequest="50" />
+                <Label Text="Bohdan Benetskyi"/>
+                <Label Text="129 per month"/>
+                <StackLayout Orientation="Horizontal">
+                    <controls:StateControl IsPaid="False"/>
+                    <controls:StateControl IsPaid="False"/>
+                    <controls:StateControl IsPaid="True"/>
+                    <controls:StateControl IsPaid="True"/>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>

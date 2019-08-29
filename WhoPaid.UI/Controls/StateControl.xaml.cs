@@ -12,12 +12,12 @@ namespace WhoPaid.UI.Controls
     public partial class StateControl : Label
     {
         public static readonly BindableProperty IsPaidProperty
-            = BindableProperty.Create(nameof(IsPaid), typeof(bool), typeof(InitialsControl),
+            = BindableProperty.Create(nameof(IsPaid), typeof(bool), typeof(StateControl),
                 false, BindingMode.TwoWay);
 
-        public Color IsPaid
+        public bool IsPaid
         {
-            get => (Color)GetValue(IsPaidProperty);
+            get => (bool)GetValue(IsPaidProperty);
             set => SetValue(IsPaidProperty, value);
         }
 
