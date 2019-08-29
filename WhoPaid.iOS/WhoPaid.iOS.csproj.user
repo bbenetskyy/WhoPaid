@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>iPhone SE iOS 12.2</SelectedDevice>
     <DefaultDevice>iPhone SE iOS 12.2</DefaultDevice>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>
