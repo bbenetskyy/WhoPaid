@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace WhoPaid.UI.Controls
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class InitialsView : ContentPage
+    public partial class InitialsControl : Grid
     {
         public static readonly BindableProperty BackColorProperty
-            = BindableProperty.Create(nameof(BackColor), typeof(Color), typeof(InitialsView),
-                StylesCache.Colors["Red"], propertyChanged: (b, _, newValue) => (b as InitialsView)?.SetBackColor((Color)newValue));
+            = BindableProperty.Create(nameof(BackColor), typeof(Color), typeof(InitialsControl),
+                StylesCache.Colors["Red"], propertyChanged: (b, _, newValue) => (b as InitialsControl)?.SetBackColor((Color)newValue));
 
         public Color BackColor
         {
@@ -23,7 +23,7 @@ namespace WhoPaid.UI.Controls
         }
 
         public static readonly BindableProperty NameProperty
-            = BindableProperty.Create(nameof(Name), typeof(string), typeof(InitialsView), string.Empty, propertyChanged: (b, _, newValue) => (b as InitialsView)?.SetName((string)newValue));
+            = BindableProperty.Create(nameof(Name), typeof(string), typeof(InitialsControl), string.Empty, propertyChanged: (b, _, newValue) => (b as InitialsControl)?.SetName((string)newValue));
 
         public string Name
         {
@@ -31,7 +31,7 @@ namespace WhoPaid.UI.Controls
             set => SetValue(NameProperty, value);
         }
 
-        public InitialsView()
+        public InitialsControl()
         {
             InitializeComponent();
         }
