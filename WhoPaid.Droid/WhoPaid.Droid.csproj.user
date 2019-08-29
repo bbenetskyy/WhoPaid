@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>emulator</SelectedDevice>
     <DefaultDevice>emulator</DefaultDevice>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>
