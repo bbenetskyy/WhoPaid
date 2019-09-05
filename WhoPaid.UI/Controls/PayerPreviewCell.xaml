@@ -18,8 +18,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <controls:InitialsControl Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" 
-                                  BackColor="{StaticResource Red}" Name="{Binding FullName}"
-                                  HeightRequest="50" WidthRequest="50" />
+                                  BackColor="{Binding PaymentHistory, Converter={StaticResource HistoryToColorConverter}}"
+                                  Name="{Binding FullName}" HeightRequest="50" WidthRequest="50" />
         <Label  Grid.Row="0" Grid.Column="1" Text="{Binding FullName}" FontSize="Large" FontAttributes="Bold"
                 VerticalTextAlignment="End" VerticalOptions="End"/>
         <Label Grid.Row="1" Grid.Column="1"  TextColor="LightGray" VerticalOptions="Start" VerticalTextAlignment="Start"
