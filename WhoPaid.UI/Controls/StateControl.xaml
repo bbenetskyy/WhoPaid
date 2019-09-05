@@ -9,7 +9,6 @@
              x:Class="WhoPaid.UI.Controls.StateControl"
              HorizontalTextAlignment="Center"
              VerticalTextAlignment="Center"
-             FontSize="20"
              FontFamily="{StaticResource IcoMoon}"
              x:Name="stateControl"
              d:TextColor="{StaticResource Red}"

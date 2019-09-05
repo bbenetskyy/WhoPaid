@@ -4,17 +4,33 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:WhoPaid.UI.Controls;assembly=WhoPaid.UI"
+             xmlns:resx="clr-namespace:WhoPaid.Core.Resources;assembly=WhoPaid.Core"
              mc:Ignorable="d"
              x:Class="WhoPaid.UI.Controls.PayerPreviewCell">
-      <StackLayout>
-          <controls:InitialsControl BackColor="{StaticResource Red}" Name="BB" HeightRequest="50" WidthRequest="50" />
-        <Label d:Text="Bohdan Benetskyi"/>
-          <Label d:Text="129 per month"/>
-          <StackLayout Orientation="Horizontal">
-            <controls:StateControl IsPaid="False"/>
-            <controls:StateControl IsPaid="False"/>
-            <controls:StateControl IsPaid="True"/>
-            <controls:StateControl IsPaid="True"/>
-          </StackLayout>
-    </StackLayout>
+    <Grid Margin="5" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <controls:InitialsControl Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" 
+                                  BackColor="{StaticResource Red}" Name="{Binding FullName}"
+                                  HeightRequest="50" WidthRequest="50" />
+        <Label  Grid.Row="0" Grid.Column="1" Text="{Binding FullName}" FontSize="Large" FontAttributes="Bold"
+                VerticalTextAlignment="End" VerticalOptions="End"/>
+        <Label Grid.Row="1" Grid.Column="1"  TextColor="LightGray" VerticalOptions="Start" VerticalTextAlignment="Start"
+               Text="{Binding MonthRate, StringFormat={x:Static resx:AppResources.MonthRate}}"/>
+        <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"  Orientation="Horizontal" HorizontalOptions="End"
+                     BindableLayout.ItemsSource="{Binding PaymentHistory}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <controls:StateControl FontSize="20" IsPaid="{Binding IsPaid}"/>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </Grid>
 </ViewCell>

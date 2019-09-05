@@ -23,17 +23,13 @@
                 <Label Text="{x:Static ic:IcoMoonCodes.Plus}" Style="{StaticResource IconLabel}"/>
                 <Label Text="{x:Static ic:IcoMoonCodes.Right}" Style="{StaticResource IconLabel}"/>
             </FlexLayout>
-            <StackLayout>
-                <controls:InitialsControl BackColor="{StaticResource Red}" Name="Bohdan Benetskyi" HeightRequest="50" WidthRequest="50" />
-                <Label Text="Bohdan Benetskyi"/>
-                <Label Text="129 per month"/>
-                <StackLayout Orientation="Horizontal">
-                    <controls:StateControl IsPaid="False"/>
-                    <controls:StateControl IsPaid="False"/>
-                    <controls:StateControl IsPaid="True"/>
-                    <controls:StateControl IsPaid="True"/>
-                </StackLayout>
-            </StackLayout>
+            <ListView ItemsSource="{Binding TaxPayers}" HasUnevenRows="True" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <controls:PayerPreviewCell/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>
