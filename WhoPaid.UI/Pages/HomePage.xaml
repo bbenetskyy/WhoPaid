@@ -5,8 +5,16 @@
     xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:WhoPaid.Core.ViewModels;assembly=WhoPaid.Core"
     xmlns:ic="clr-namespace:WhoPaid.Core.Static;assembly=WhoPaid.Core"
+    xmlns:controls="clr-namespace:WhoPaid.UI.Controls;assembly=WhoPaid.UI"
     x:Class="WhoPaid.UI.Pages.HomePage"
     Title="Main page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add New TODO => RESX" >
+            <ToolbarItem.IconImageSource>
+                <FontImageSource Glyph="{x:Static ic:IcoMoonCodes.Plus}" Size="25" FontFamily="{StaticResource IcoMoon}"/>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome!!&#10;App scaffolded with MvxScaffolding"
@@ -22,6 +30,13 @@
                 <Label Text="{x:Static ic:IcoMoonCodes.Plus}" Style="{StaticResource IconLabel}"/>
                 <Label Text="{x:Static ic:IcoMoonCodes.Right}" Style="{StaticResource IconLabel}"/>
             </FlexLayout>
+            <ListView ItemsSource="{Binding TaxPayers}" HasUnevenRows="True" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <controls:PayerPreviewCell/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>

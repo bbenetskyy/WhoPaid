@@ -7,6 +7,7 @@
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="6.3.1" />
     <PackageReference Include="MvvmCross.CodeAnalysis" Version="6.3.1" />
+    <PackageReference Include="ReactiveUI" Version="9.22.1" />
     <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
   </ItemGroup>
 
@@ -15,12 +16,21 @@
       <Generator></Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\AppResources.resx">
-      <Generator></Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\WhoPaid.ReactiveUI.Interop\WhoPaid.ReactiveUI.Interop.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

@@ -11,8 +11,6 @@ using Xamarin.Forms.Xaml;
 
 namespace WhoPaid.UI.Pages
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    [MvxContentPagePresentation(WrapInNavigationPage = true)]
     public partial class HomePage : MvxContentPage<HomeViewModel>
     {
         public HomePage()

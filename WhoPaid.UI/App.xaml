@@ -3,9 +3,11 @@
     x:Class="WhoPaid.UI.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:resources="clr-namespace:WhoPaid.UI.Resources">
+    xmlns:resources="clr-namespace:WhoPaid.UI.Resources"
+    xmlns:converters="clr-namespace:WhoPaid.UI.Converters;assembly=WhoPaid.UI">
     <Application.Resources>
         <ResourceDictionary Source="Resources/Styles.xaml" />
         <ResourceDictionary Source="Resources/Colors.xaml" />
+        <converters:HistoryToColorConverter x:Key="HistoryToColorConverter"/>
     </Application.Resources>
 </Application>

@@ -14,4 +14,16 @@
     <Color x:Key="PrimaryTextColor">#000000</Color>
     <Color x:Key="SecondaryTextColor">#ffffff</Color>
 
+    <Color x:Key="Red">#D01629</Color>
+    <Color x:Key="Green">#0BB951</Color>
+    <Color x:Key="White">#E8EFFF</Color>
+    <Color x:Key="Black">#002D00</Color>
+
+    <Color x:Key="DarkGreen">#497750</Color>
+    <Color x:Key="DarkBlue">#224574</Color>
+
+    <Color x:Key="LightGreen">#D8F9DA</Color>
+    <Color x:Key="LightBlue">#00AFFF</Color>
+    <Color x:Key="LightPink">#FF4C61</Color>
+
 </ResourceDictionary>

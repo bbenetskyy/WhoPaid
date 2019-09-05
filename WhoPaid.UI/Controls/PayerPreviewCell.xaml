@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:WhoPaid.UI.Controls;assembly=WhoPaid.UI"
+             xmlns:resx="clr-namespace:WhoPaid.Core.Resources;assembly=WhoPaid.Core"
+             mc:Ignorable="d"
+             x:Class="WhoPaid.UI.Controls.PayerPreviewCell">
+    <Grid Margin="5" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <controls:InitialsControl Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" 
+                                  BackColor="{Binding PaymentHistory, Converter={StaticResource HistoryToColorConverter}}"
+                                  Name="{Binding FullName}" HeightRequest="50" WidthRequest="50" />
+        <Label  Grid.Row="0" Grid.Column="1" Text="{Binding FullName}" FontSize="Large" FontAttributes="Bold"
+                VerticalTextAlignment="End" VerticalOptions="End"/>
+        <Label Grid.Row="1" Grid.Column="1"  TextColor="LightGray" VerticalOptions="Start" VerticalTextAlignment="Start"
+               Text="{Binding MonthRate, StringFormat={x:Static resx:AppResources.MonthRate}}"/>
+        <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"  Orientation="Horizontal" HorizontalOptions="End"
+                     BindableLayout.ItemsSource="{Binding PaymentHistory}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <controls:StateControl FontSize="20" IsPaid="{Binding IsPaid}"/>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </Grid>
+</ViewCell>

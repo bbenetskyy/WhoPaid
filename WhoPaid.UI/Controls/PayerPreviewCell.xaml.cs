@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace WhoPaid.UI
+namespace WhoPaid.UI.Controls
 {
-    public partial class App : Application
+    public partial class PayerPreviewCell : ViewCell
     {
-        public App()
+        public PayerPreviewCell()
         {
             InitializeComponent();
         }

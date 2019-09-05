@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Label xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:ic="clr-namespace:WhoPaid.Core.Static;assembly=WhoPaid.Core"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:WhoPaid.UI.Controls;assembly=WhoPaid.UI"
+             mc:Ignorable="d"
+             x:Class="WhoPaid.UI.Controls.StateControl"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+             FontFamily="{StaticResource IcoMoon}"
+             x:Name="stateControl"
+             d:TextColor="{StaticResource Red}"
+             d:Text="{x:Static ic:IcoMoonCodes.Ban}" >
+    <Label.Triggers>
+        <DataTrigger Binding="{Binding Source={x:Reference stateControl}, Path=IsPaid}"
+                     TargetType="Label" Value="True">
+            <Setter Property="TextColor" Value="{StaticResource Green}"/>
+            <Setter Property="Text" Value="{x:Static ic:IcoMoonCodes.Check}"/>
+        </DataTrigger>
+        <DataTrigger Binding="{Binding Source={x:Reference stateControl}, Path=IsPaid}"
+                     TargetType="Label" Value="False">
+            <Setter Property="TextColor" Value="{StaticResource Red}"/>
+            <Setter Property="Text" Value="{x:Static ic:IcoMoonCodes.Ban}"/>
+        </DataTrigger>
+    </Label.Triggers>
+</Label>
