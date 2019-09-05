@@ -9,7 +9,6 @@ using Xamarin.Forms.Xaml;
 
 namespace WhoPaid.UI.Controls
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InitialsControl : Grid
     {
         public static readonly BindableProperty BackColorProperty
