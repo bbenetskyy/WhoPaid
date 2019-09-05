@@ -8,6 +8,13 @@
     xmlns:controls="clr-namespace:WhoPaid.UI.Controls;assembly=WhoPaid.UI"
     x:Class="WhoPaid.UI.Pages.HomePage"
     Title="Main page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add New TODO => RESX" >
+            <ToolbarItem.IconImageSource>
+                <FontImageSource Glyph="{x:Static ic:IcoMoonCodes.Plus}" Size="25" FontFamily="{StaticResource IcoMoon}"/>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome!!&#10;App scaffolded with MvxScaffolding"
