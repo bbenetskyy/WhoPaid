@@ -9,9 +9,9 @@
     x:Class="WhoPaid.UI.Pages.HomePage"
     Title="Main page">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add New TODO => RESX" >
+        <ToolbarItem Text="Add New TODO => RESX" Command="{Binding AddTaxPayerCommand}">
             <ToolbarItem.IconImageSource>
-                <FontImageSource Glyph="{x:Static ic:IcoMoonCodes.Plus}" Size="25" FontFamily="{StaticResource IcoMoon}"/>
+                <FontImageSource Glyph="{x:Static ic:IcoMoonCodes.UserPlus}" Size="25" FontFamily="{StaticResource IcoMoon}"/>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
@@ -21,6 +21,7 @@
           VerticalOptions="Start"
           HorizontalOptions="CenterAndExpand" />
             <FlexLayout>
+                <Label Text="{x:Static ic:IcoMoonCodes.UserPlus}" Style="{StaticResource IconLabel}"/>
                 <Label Text="{x:Static ic:IcoMoonCodes.Ban}" Style="{StaticResource IconLabel}"/>
                 <Label Text="{x:Static ic:IcoMoonCodes.Chart}" Style="{StaticResource IconLabel}"/>
                 <Label Text="{x:Static ic:IcoMoonCodes.Check}" Style="{StaticResource IconLabel}"/>

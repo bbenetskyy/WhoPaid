@@ -7,6 +7,7 @@ namespace WhoPaid.Core.Static
     public static class IcoMoonCodes
     {
         public const string Money = "\ue900";
+        public const string UserPlus = "\ue901";
         public const string Left = "\uf053";
         public const string Right = "\uf054";
         public const string Plus = "\uf055";
