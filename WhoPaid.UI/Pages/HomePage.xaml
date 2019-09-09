@@ -7,6 +7,7 @@
     xmlns:ic="clr-namespace:WhoPaid.Core.Static;assembly=WhoPaid.Core"
     xmlns:controls="clr-namespace:WhoPaid.UI.Controls;assembly=WhoPaid.UI"
     x:Class="WhoPaid.UI.Pages.HomePage"
+    Visual="Material"
     Title="Main page">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add New TODO => RESX" Command="{Binding AddTaxPayerCommand}">

@@ -24,15 +24,15 @@ namespace WhoPaid.Core.ViewModels
 
         public override void ViewAppeared()
         {
-            _navigationService.Close(this, new TaxPayer
-            {
-                MonthRate = 300,
-                FullName = "Test",
-                PaymentHistory = new List<Payment>
-                {
-                    new Payment {IsPaid = true}
-                }
-            });
+            //_navigationService.Close(this, new TaxPayer
+            //{
+            //    MonthRate = 300,
+            //    FullName = "Test",
+            //    PaymentHistory = new List<Payment>
+            //    {
+            //        new Payment {IsPaid = true}
+            //    }
+            //});
         }
     }
 }

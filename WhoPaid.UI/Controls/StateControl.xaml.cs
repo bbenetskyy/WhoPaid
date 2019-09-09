@@ -11,9 +11,8 @@ namespace WhoPaid.UI.Controls
 {
     public partial class StateControl : Label
     {
-        public static readonly BindableProperty IsPaidProperty
-            = BindableProperty.Create(nameof(IsPaid), typeof(bool), typeof(StateControl),
-                false, BindingMode.TwoWay);
+        public static readonly BindableProperty IsPaidProperty = BindableProperty.Create(nameof(IsPaid),
+            typeof(bool), typeof(StateControl), false, BindingMode.TwoWay);
 
         public bool IsPaid
         {

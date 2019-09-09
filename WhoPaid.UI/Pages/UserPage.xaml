@@ -5,14 +5,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:WhoPaid.Core.ViewModels;assembly=WhoPaid.Core"
              xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+             xmlns:controls="clr-namespace:WhoPaid.UI.Controls;assembly=WhoPaid.UI"
+             xmlns:resx="clr-namespace:WhoPaid.Core.Resources;assembly=WhoPaid.Core"
              x:TypeArguments="viewModels:UserViewModel"
              mc:Ignorable="d"
+             Visual="Material"
+             Title="{x:Static resx:AppResources.AddTaxPayerTitle}"
              x:Class="WhoPaid.UI.Pages.UserPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Full Name" Visual="Material"/>
+            <StackLayout Orientation="Horizontal" Margin="10" Spacing="5">
+                <controls:ValueStepperControl Value="120"/>
+                <Label Text="Per Month" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center"/>
+            </StackLayout>
+                <Button Text="{x:Static resx:AppResources.SaveButton}" Style="{StaticResource PrimaryButton}"/>
+                <Button Text="{x:Static resx:AppResources.CancelButton}" Style="{StaticResource SecondaryButton}"/>
         </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>

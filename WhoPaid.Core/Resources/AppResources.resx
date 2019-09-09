@@ -61,4 +61,13 @@
   <data name="MonthRate" xml:space="preserve">
     <value>{0} per month</value>
   </data>
+  <data name="AddTaxPayerTitle" xml:space="preserve">
+    <value>Add new Tax Payer</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
 </root>

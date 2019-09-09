@@ -61,11 +61,38 @@ namespace WhoPaid.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add new Tax Payer.
+        /// </summary>
+        public static string AddTaxPayerTitle {
+            get {
+                return ResourceManager.GetString("AddTaxPayerTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string CancelButton {
+            get {
+                return ResourceManager.GetString("CancelButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} per month.
         /// </summary>
         public static string MonthRate {
             get {
                 return ResourceManager.GetString("MonthRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string SaveButton {
+            get {
+                return ResourceManager.GetString("SaveButton", resourceCulture);
             }
         }
     }
