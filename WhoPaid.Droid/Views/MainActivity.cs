@@ -19,6 +19,13 @@ namespace WhoPaid.Droid
         Theme = "@style/AppTheme")]
     public class MainActivity : MvxFormsAppCompatActivity
     {
+        protected override void RunAppStart(Bundle bundle)
+        {
+            base.RunAppStart(bundle);
+
+            Xamarin.Forms.FormsMaterial.Init(this, bundle);
+        }
+
         protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.Tabbar;

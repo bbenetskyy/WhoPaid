@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reactive;
 using System.Threading.Tasks;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using WhoPaid.Core.Models;
 using WhoPaid.Core.Services;
@@ -12,15 +13,25 @@ namespace WhoPaid.Core.ViewModels
 {
     public class HomeViewModel : MvxReactiveViewModel
     {
-        private readonly ObservableAsPropertyHelper<List<TaxPayer>> _taxPayers;
-        public List<TaxPayer> TaxPayers => _taxPayers.Value;
+        private readonly IMvxNavigationService _navigationService;
+        private readonly ObservableAsPropertyHelper<MvxObservableCollection<TaxPayer>> _taxPayers;
+        public MvxObservableCollection<TaxPayer> TaxPayers => _taxPayers.Value;
 
-        public ReactiveCommand<Unit, List<TaxPayer>> LoadTaxPayersCommand { get; }
+        public ReactiveCommand<Unit, MvxObservableCollection<TaxPayer>> LoadTaxPayersCommand { get; }
 
-        public HomeViewModel()
+        public ReactiveCommand<Unit, TaxPayer> AddTaxPayerCommand { get; }
+
+        public HomeViewModel(IMvxNavigationService navigationService)
         {
-            LoadTaxPayersCommand = ReactiveCommand.Create<Unit, List<TaxPayer>>(_ => LoadTaxPayers());
+            _navigationService = navigationService;
+
+            LoadTaxPayersCommand = ReactiveCommand.Create<Unit, MvxObservableCollection<TaxPayer>>(_ => LoadTaxPayers());
             //LoadTaxPayersCommand.ThrownExceptions.Subscribe(DisplayError);
+
+            AddTaxPayerCommand = ReactiveCommand.CreateFromTask<Unit, TaxPayer>(_ =>
+                _navigationService.Navigate<UserViewModel, TaxPayer>());
+            //AddTaxPayerCommand.ThrownExceptions.Subscribe(DisplayError);
+            AddTaxPayerCommand.Subscribe(x => TaxPayers.Add(x));
 
             _taxPayers = LoadTaxPayersCommand.ToProperty(this, nameof(TaxPayers));
         }
@@ -31,9 +42,9 @@ namespace WhoPaid.Core.ViewModels
             return base.Initialize();
         }
 
-        private List<TaxPayer> LoadTaxPayers()
+        private MvxObservableCollection<TaxPayer> LoadTaxPayers()
         {
-            return new List<TaxPayer>
+            return new MvxObservableCollection<TaxPayer>(new List<TaxPayer>
             {
                 new TaxPayer
                 {
@@ -75,7 +86,7 @@ namespace WhoPaid.Core.ViewModels
                         new Payment{IsPaid = false},
                     }
                 }
-            };
+            });
         }
     }
 }

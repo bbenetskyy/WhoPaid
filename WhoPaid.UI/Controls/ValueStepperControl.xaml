@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="WhoPaid.UI.Controls.ValueStepperControl">
+    <ContentView.Resources>
+        <Style x:Key="StepperButton" TargetType="Button">
+            <Setter Property="WidthRequest" Value="45"/>
+            <Setter Property="Visual" Value="Default"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+    </ContentView.Resources>
+    <ContentView.Content>
+      <pancakeView:PancakeView BackgroundColor="Transparent" BorderThickness="2"
+                               BorderColor="{StaticResource PrimaryLightColor}"
+                               Margin="0" CornerRadius="20" HeightRequest="40">
+          <StackLayout Orientation="Horizontal">
+              <Button Text="-" Style="{StaticResource StepperButton}" TextColor="{StaticResource Red}"
+                      Clicked="Button_Minus_OnClicked"/>
+              <Label x:Name="ValueLabel" VerticalTextAlignment="Center" FontSize="Medium"/>
+              <Button Text="+" Style="{StaticResource StepperButton}" TextColor="{StaticResource Green}"
+                      Clicked="Button_Plus_OnClicked"/>
+          </StackLayout>
+      </pancakeView:PancakeView>
+    </ContentView.Content>
+</ContentView>

@@ -10,6 +10,7 @@
     <PackageReference Include="MvvmCross.Forms" Version="6.3.1" />
     <PackageReference Include="ReactiveUI.XamForms" Version="9.22.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.2.0.709249" />
   </ItemGroup>
   
   <ItemGroup>
@@ -42,6 +43,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Controls\PayerPreviewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\ValueStepperControl.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\UserPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Styles.xaml">
